@@ -16,6 +16,40 @@ body {
     overflow: hidden;
 }
 
+.top-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    backdrop-filter: blur(10px);
+    padding: 1.5vh;
+    border-bottom-left-radius: 1vw;
+    border-bottom-right-radius: 1vw;
+    background-color: rgba(0, 0, 0, 0.25); 
+    color: #fff;
+}
+
+.window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 0.1vw solid rgb(206, 206, 206);
+    border-radius: 1vw;
+    width: fit-content;
+    padding: 2vw;
+    background-color: #c5fcffbb;
+    box-shadow: inset 4px 4px 10px #bcbcbc6c, inset -4px -4px 10px #ffffff6d;
+}
+
+/* .window:hover {
+  box-shadow: inset 2px 2px 5px #bcbcbc6c, inset -2px -2px 5px #ffffff6d, 2px 2px 5px #bcbcbc6c, -2px -2px 5px #ffffff6d;
+} */
+
+.window:focus {
+  outline: none;
+  box-shadow: inset 2px 2px 5px #bcbcbc6c, inset -2px -2px 5px #ffffff6d, 2px 2px 5px #bcbcbc6c, -2px -2px 5px #ffffff6d;
+}
+
 .version {
     position: absolute;
     bottom: 1vh;
