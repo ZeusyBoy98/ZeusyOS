@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+html, body {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    font-family: 'JetBrains Mono', monospace;
+    background-image: url('../images/wallpapers/thunder.jpeg');
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.version {
+    position: absolute;
+    bottom: 1vh;
+    right: 1vw;
+    color: white;
+    font-size: 2vh;
+}
