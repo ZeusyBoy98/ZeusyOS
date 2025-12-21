@@ -38,9 +38,27 @@ body {
     border: 0.1vw solid rgb(206, 206, 206);
     border-radius: 1vw;
     width: fit-content;
-    padding: 2vw;
     background-color: #c5fcffbb;
     box-shadow: inset 4px 4px 10px #bcbcbc6c, inset -4px -4px 10px #ffffff6d;
+}
+
+.windowContent {
+    padding: 2vw;
+    width: fit-content;
+    height: fit-content;
+}
+
+.handle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    cursor: move;
+    justify-content: center;
+    margin-bottom: 1vh;
+    border-bottom: 0.1vw solid rgb(206, 206, 206);
+    background-color: #c5fcff;
+    border-top-left-radius: 1vw;
+    border-top-right-radius: 1vw;
 }
 
 /* .window:hover {
