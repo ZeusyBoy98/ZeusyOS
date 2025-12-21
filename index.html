@@ -4,20 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZeusyOS</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
-    <div class="welcome-screen">
+    <div class="screen" id="welcome-screen">
         <div class="welcome">Welcome to ZeusyOS!</div>
-        <button id="continue" class="neu-button">Continue</button>
+        <button id="continue" class="neu">Continue</button>
     </div>
-    <div class="setup-colour">
+    <div class="screen" id="setup-colour">
         <div style="font-size: 5vh; margin-bottom: 5vh;">Setup your color scheme</div>
         <div>
-            <button class="neu-button" style="margin-right: 2vw" id="dark">Light</button>
-            <button class="neu-button" id="dark">Dark</button>
+            <button class="neu" style="margin-right: 2vw" id="light">Light</button>
+            <button class="neu" id="dark">Dark</button>
         </div>
     </div>
-    <script src="./js/welcome.js"></script>
+    <div class="screen" id="setup-username">
+        <div style="font-size: 5vh; margin-bottom: 5vh;">Setup your username</div>
+        <input type="text" id="username-input" class="neu" style="text-align: center;" placeholder="Enter your username" maxlength=30>
+        <button id="username-continue" class="neu" style="margin-top: 5vh;">Continue</button>
+    </div>
+    <script src="./js/setup.js"></script>
 </body>
 </html>
