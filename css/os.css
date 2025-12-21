@@ -49,6 +49,11 @@ button {
     box-shadow: inset 4px 4px 10px #bcbcbc6c, inset -4px -4px 10px #ffffff6d;
 }
 
+.window.dragging {
+    transform: none;
+    will-change: left, top;
+}
+
 .windowContent {
     padding: 2vw;
     width: fit-content;

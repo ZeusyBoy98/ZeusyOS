@@ -35,6 +35,15 @@ function dragElement(element) {
     function startDragging(e) {
         e = e || window.event;
         e.preventDefault();
+
+        const rect = element.getBoundingClientRect();
+        const computed = window.getComputedStyle(element);
+        if (computed.transform && computed.transform !== 'none') {
+            element.style.left = rect.left + "px";
+            element.style.top = rect.top + "px";
+            element.style.transform = 'none';
+        }
+
         initialX = e.clientX;
         initialY = e.clientY;
         document.onmouseup = stopDragging;
@@ -48,8 +57,10 @@ function dragElement(element) {
         currentY = initialY - e.clientY;
         initialX = e.clientX;
         initialY = e.clientY;
-        element.style.top = (element.offsetTop - currentY) + "px";
-        element.style.left = (element.offsetLeft - currentX) + "px";
+
+        // Not my code, works to keep window in bounds
+        element.style.top = Math.min(Math.max(0, element.offsetTop - currentY), Math.max(0, window.innerHeight - element.offsetHeight)) + "px";
+        element.style.left = Math.min(Math.max(0, element.offsetLeft - currentX), Math.max(0, window.innerWidth - element.offsetWidth)) + "px";
     }
 
     function stopDragging() {
