@@ -1,7 +1,19 @@
 dragElement(document.getElementById("test"));
+dragElement(document.getElementById("usernameChanger"));
 
 const testClose = document.getElementById("testClose");
 const testOpen = document.getElementById("testOpen");
+
+const usernameChangerClose = document.getElementById("usernameChangerClose");
+const usernameChangerOpen = document.getElementById("userText");
+
+usernameChangerClose.addEventListener("click", function() {
+    closeWindow(document.getElementById("usernameChanger"));
+})
+
+usernameChangerOpen.addEventListener("click", function() {
+    openWindow(document.getElementById("usernameChanger"));
+})
 
 testClose.addEventListener("click", function() {
     closeWindow(document.getElementById("test"));

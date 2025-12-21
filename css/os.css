@@ -16,6 +16,11 @@ body {
     overflow: hidden;
 }
 
+button {
+    font-family: 'JetBrains Mono', monospace;
+    cursor: pointer;
+}
+
 .top-bar {
     display: flex;
     flex-direction: row;
@@ -31,7 +36,7 @@ body {
 }
 
 .window {
-    display: flex;
+    display: none;
     flex-direction: column;
     position: absolute;
     top: 50%;
@@ -97,6 +102,7 @@ body {
     right: 1vw;
     color: white;
     font-size: 2vh;
+    cursor: pointer;
 }
 
 .username {
@@ -106,4 +112,25 @@ body {
     color: white;
     font-size: 2vh;
     cursor: pointer;
+}
+
+/* From Uiverse.io by adamgiebl */ 
+.neu {
+  background-color: rgba(244, 244, 244, 0.3);
+  border-radius: 50px;
+  box-shadow: inset 4px 4px 10px #bcbcbc6c, inset -4px -4px 10px #ffffff6d;
+  color: #4d4d4d;
+  font-size: 18px;
+  padding: 15px 40px;
+  transition: all 0.2s ease-in-out;
+  border: 2px solid rgb(206, 206, 206);
+}
+
+.neu:hover {
+  box-shadow: inset 2px 2px 5px #bcbcbc6c, inset -2px -2px 5px #ffffff6d, 2px 2px 5px #bcbcbc6c, -2px -2px 5px #ffffff6d;
+}
+
+.neu:focus {
+  outline: none;
+  box-shadow: inset 2px 2px 5px #bcbcbc6c, inset -2px -2px 5px #ffffff6d, 2px 2px 5px #bcbcbc6c, -2px -2px 5px #ffffff6d;
 }
