@@ -31,6 +31,8 @@ body {
 }
 
 .window {
+    display: flex;
+    flex-direction: column;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -51,14 +53,33 @@ body {
 .handle {
     width: 100%;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     cursor: move;
-    justify-content: center;
     margin-bottom: 1vh;
     border-bottom: 0.1vw solid rgb(206, 206, 206);
     background-color: #c5fcff;
     border-top-left-radius: 1vw;
     border-top-right-radius: 1vw;
+}
+
+.closeButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0.5vw;
+    width: 1vw;
+    height: 1vw;
+    background-color: red;
+    cursor: pointer;
+    border-radius: 100%
+}
+
+.appHeader {
+    font-weight: bold;
+    color: black;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 /* .window:hover {
@@ -84,4 +105,5 @@ body {
     left: 1vw;
     color: white;
     font-size: 2vh;
+    cursor: pointer;
 }

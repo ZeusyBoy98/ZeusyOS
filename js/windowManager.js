@@ -1,4 +1,15 @@
-dragElement(document.getElementById("window"));
+dragElement(document.getElementById("test"));
+
+const testClose = document.getElementById("testClose");
+const testOpen = document.getElementById("testOpen");
+
+testClose.addEventListener("click", function() {
+    closeWindow(document.getElementById("test"));
+})
+
+testOpen.addEventListener("click", function() {
+    openWindow(document.getElementById("test"));
+})
 
 function dragElement(element) {
     var initialX = 0, initialY = 0, currentX = 0, currentY = 0;
@@ -33,4 +44,12 @@ function dragElement(element) {
     document.onmouseup = null;
     document.onmousemove = null;
   }
+}
+
+function closeWindow(element) {
+    element.style.display = "none";
+}
+
+function openWindow(element) {
+    element.style.display = "flex";
 }
