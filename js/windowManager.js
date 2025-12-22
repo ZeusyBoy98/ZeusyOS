@@ -1,33 +1,46 @@
-dragElement(document.getElementById("test"));
-dragElement(document.getElementById("usernameChanger"));
+let biggestIndex = 1;
 
-const testClose = document.getElementById("testClose");
-const testOpen = document.getElementById("testOpen");
+/* ----------DOM Elements---------- */
+const topBar = document.getElementById("top");
+const test = document.getElementById("test");
+const usernameChanger = document.getElementById("usernameChanger");
+const notepad = document.getElementById("notepad")
 
-const usernameChangerClose = document.getElementById("usernameChangerClose");
-const usernameChangerOpen = document.getElementById("userText");
+/* --------Window Management-------- */
+initializeWindow(test);
+initializeWindow(usernameChanger);
+initializeWindow(notepad);
 
-usernameChangerClose.addEventListener("click", function() {
-    closeWindow(document.getElementById("usernameChanger"));
-})
+/* ------------Functions------------ */
+function initializeWindow(element) {
+    dragElement(element);
 
-usernameChangerOpen.addEventListener("click", function() {
-    openWindow(document.getElementById("usernameChanger"));
-})
+    const closeBtn = document.getElementById(element.id + "Close");
+    if (closeBtn) closeBtn.addEventListener("click", () => closeWindow(element));
 
-testClose.addEventListener("click", function() {
-    closeWindow(document.getElementById("test"));
-})
+    const openBtn = document.getElementById(element.id + "Open");
+    if (openBtn) openBtn.addEventListener("click", () => openWindow(element));
 
-testOpen.addEventListener("click", function() {
-    openWindow(document.getElementById("test"));
-})
+    addWindowTapHandling(element);
+};
+
+function addWindowTapHandling(element) {
+    element.addEventListener("mousedown", () => {
+        handleWindowTap(element);
+    });
+}
+
+function handleWindowTap(element) {
+    biggestIndex++;
+    element.style.zIndex = biggestIndex;
+    topBar.style.zIndex = biggestIndex + 1;
+}
 
 function dragElement(element) {
     var initialX = 0, initialY = 0, currentX = 0, currentY = 0;
 
     if (document.getElementById(element.id + "header")) {
-        document.getElementById(element.id + "header").onmousedown = startDragging;
+        document.getElementById(element.id + "header").onmousedown = startDragging
     } else {
         element.onmousedown = startDragging;
     }
@@ -75,4 +88,5 @@ function closeWindow(element) {
 
 function openWindow(element) {
     element.style.display = "flex";
+    handleWindowTap(element);
 }

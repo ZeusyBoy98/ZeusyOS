@@ -9,7 +9,6 @@ body {
     margin: 0;
     font-family: 'JetBrains Mono', monospace;
     background-image: url('../images/wallpapers/thunder.jpeg');
-    height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -19,6 +18,10 @@ body {
 button {
     font-family: 'JetBrains Mono', monospace;
     cursor: pointer;
+}
+
+span {
+    font-size: 1.1vw;
 }
 
 .top-bar {
@@ -33,6 +36,7 @@ button {
     background-color: rgba(0, 0, 0, 0.25); 
     color: #fff;
     box-shadow: inset 4px 4px 10px #bcbcbc6c, inset -4px -4px 10px #ffffff6d;
+    font-size: 1.25vw;
 }
 
 .desktopApps {

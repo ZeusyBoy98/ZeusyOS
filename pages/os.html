@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/os.css">
 </head>
 <body>
-    <div class="top-bar">
+    <div class="top-bar" id="top">
         <div style="margin-left: 2vw;" id="usage">50% CPU Usage</div>
         <!-- <div style="margin-left: auto; margin-right: auto;">ZeusyOS</div> -->
         <div style="margin-right: 2vw;" id="timeDisplay">Getting time...</div>
@@ -17,7 +17,7 @@
 
     <!-- Desktop Apps -->
     <div class="desktopApps" id="desktopApps">
-        <div class="desktopApp" id="notepad">
+        <div class="desktopApp" id="notepadOpen">
             <i class="material-icons desktopIcon"  style="color: rgb(101, 224, 255)">description</i>
             <span>Notepad</span>
         </div>
@@ -25,6 +25,16 @@
     <!-- Desktop Apps -->
 
     <!-- Windows -->
+    <div class="window" id="notepad">
+        <div class="handle" id="notepadheader">
+            <div class="closeButton" id="notepadClose">x</div>
+            <div class="appHeader">Notepad</div>
+        </div>
+        <div class="windowContent">
+            Notepad
+        </div>
+    </div>
+
     <div class="window" id="test">
         <div class="handle" id="testheader">
             <div class="closeButton" id="testClose">x</div>
@@ -49,7 +59,7 @@
     <!-- Windows -->
 
     <!-- Version -->
-    <div class="username" id="userText">User: ZeusyBoy</div>
+    <div class="username" id="usernameChangerOpen">User: ZeusyBoy</div>
     <div class="version" id="testOpen">ZeusyOS 1.0.0 Thunder</div>
     <script src="../js/username.js"></script>
     <script src="../js/top-bar.js"></script>
