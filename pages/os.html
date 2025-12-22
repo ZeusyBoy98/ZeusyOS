@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZeusyOS</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="../css/os.css">
 </head>
 <body>
@@ -12,8 +13,18 @@
         <!-- <div style="margin-left: auto; margin-right: auto;">ZeusyOS</div> -->
         <div style="margin-right: 2vw;" id="timeDisplay">Getting time...</div>
     </div>
-    <!-- Always leave top bar at top-->
+    <!-- Top bar -->
 
+    <!-- Desktop Apps -->
+    <div class="desktopApps" id="desktopApps">
+        <div class="desktopApp" id="notepad">
+            <i class="material-icons desktopIcon"  style="color: rgb(101, 224, 255)">description</i>
+            <span>Notepad</span>
+        </div>
+    </div>
+    <!-- Desktop Apps -->
+
+    <!-- Windows -->
     <div class="window" id="test">
         <div class="handle" id="testheader">
             <div class="closeButton" id="testClose">x</div>
@@ -35,8 +46,9 @@
             <button class="neu" id="saveUsernameButton">Save</button>
         </div>
     </div>
+    <!-- Windows -->
 
-    <!-- Always leave version number at the bottom -->
+    <!-- Version -->
     <div class="username" id="userText">User: ZeusyBoy</div>
     <div class="version" id="testOpen">ZeusyOS 1.0.0 Thunder</div>
     <script src="../js/username.js"></script>

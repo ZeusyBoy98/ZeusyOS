@@ -35,6 +35,36 @@ button {
     box-shadow: inset 4px 4px 10px #bcbcbc6c, inset -4px -4px 10px #ffffff6d;
 }
 
+.desktopApps {
+    display: flex;
+    padding-top: 5vh;
+    padding-left: 5vw;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.desktopApp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3vh;
+    color: white;
+    cursor: pointer;
+    padding: 0.2vw;
+}
+
+.desktopIcon {
+    font-size: 4vw;
+}
+
+.desktopApp:hover {
+    border: 0.1vw solid rgb(206, 206, 206);
+    box-shadow: inset 4px 4px 10px #bcbcbc6c, inset -4px -4px 10px #ffffff6d;
+    border-radius: 1vw;
+    padding: 0.1vw;
+}
+
 .window {
     display: none;
     flex-direction: column;
