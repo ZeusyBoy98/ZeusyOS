@@ -5,11 +5,13 @@ const topBar = document.getElementById("top");
 const test = document.getElementById("test");
 const usernameChanger = document.getElementById("usernameChanger");
 const notepad = document.getElementById("notepad")
+const weather = document.getElementById("weather")
 
 /* --------Window Management-------- */
 initializeWindow(test);
 initializeWindow(usernameChanger);
 initializeWindow(notepad);
+initializeWindow(weather);
 
 /* ------------Functions------------ */
 function initializeWindow(element) {

@@ -45,7 +45,8 @@ span {
     padding-left: 5vw;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 5vw;
 }
 
 .desktopApp {
@@ -187,6 +188,21 @@ span {
     font-size: 3vh;
     font-weight: bold;
     padding: 1vh;
+}
+
+.weatherInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#locationInput {
+    flex: 1;
+    min-width: 0;
+}
+
+#weatherSearchButton {
+    flex: 0 0 auto;
 }
 
 /* From Uiverse.io by adamgiebl */ 
