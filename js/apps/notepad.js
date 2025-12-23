@@ -14,6 +14,12 @@ let content = JSON.parse(localStorage.getItem("notes")) || [
 let currentNoteIndex = 0;
 
 const newNoteButton = document.getElementById("newNoteButton");
+const deleteNoteButton = document.getElementById("deleteNoteButton");
+
+deleteNoteButton.addEventListener("click", () => {
+    deleteNote(currentNoteIndex);
+});
+
 let notesContent = document.getElementById("notesContent");
 let notesTitle = document.getElementById("notesTitle");
 
@@ -87,4 +93,25 @@ function newNote() {
     localStorage.setItem("notes", JSON.stringify(content));
     addToSideBar(content.length - 1);
     setNotesContent(content.length - 1);
+}
+
+function deleteNote(index) {
+    content.splice(index, 1);
+    localStorage.setItem("notes", JSON.stringify(content));
+    
+    if (currentNoteIndex >= content.length) {
+        currentNoteIndex = content.length - 1;
+    }
+
+    const sidebar = document.getElementById("notepadSidebar");
+    sidebar.innerHTML = "";
+    for (let i = 0; i < content.length; i++) {
+        addToSideBar(i);
+    }
+    if (content.length > 0) {
+        setNotesContent(currentNoteIndex);
+    } else {
+        notesTitle.value = "";
+        notesContent.value = "";
+    }
 }
