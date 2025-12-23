@@ -1,4 +1,4 @@
-const userText = document.getElementById("userText");
+const userText = document.getElementById("usernameChangerOpen");
 const saveUsernameButton = document.getElementById("saveUsernameButton");
 const usernameInput = document.getElementById("usernameInput");
 

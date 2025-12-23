@@ -78,8 +78,6 @@ span {
     transform: translate(-50%, -50%);
     border: 0.1vw solid rgb(206, 206, 206);
     border-radius: 1vw;
-    width: 40vw;
-    min-width: 320px;
     max-width: 80vw;
     background-color: #c5fcffbb;
     box-shadow: inset 4px 4px 10px #bcbcbc6c, inset -4px -4px 10px #ffffff6d;
@@ -97,7 +95,8 @@ span {
     padding: 2vw;
     width: 100%;
     box-sizing: border-box;
-    height: auto;
+    height: 50vh;
+    gap: 1vh;
 }
 
 .handle {
@@ -130,6 +129,16 @@ span {
     color: black;
     margin-right: auto;
     margin-left: auto;
+}
+
+#notepadSidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    margin-bottom: 2vh;
+    padding: 0.2vw;
+    border-right: 0.2vw solid #2727278d;
+    height: 100%;
 }
 
 /* .window:hover {
