@@ -13,7 +13,18 @@ let content = JSON.parse(localStorage.getItem("notes")) || [
 
 let currentNoteIndex = 0;
 
+const newNoteButton = document.getElementById("newNoteButton");
 let notesContent = document.getElementById("notesContent");
+let notesTitle = document.getElementById("notesTitle");
+
+newNoteButton.addEventListener("click", () => {
+    newNote();
+});
+
+notesTitle.addEventListener("input", () => {
+    content[currentNoteIndex].title = notesTitle.value;
+    localStorage.setItem("notes", JSON.stringify(content));
+});
 
 notesContent.addEventListener("input", () => {
     content[currentNoteIndex].content = notesContent.value;
@@ -22,8 +33,10 @@ notesContent.addEventListener("input", () => {
 
 function setNotesContent(index) {
     notesContent = document.getElementById("notesContent");
+    notesTitle = document.getElementById("notesTitle");
 
     currentNoteIndex = index;
+    notesTitle.value = content[index].title;
     notesContent.value = content[index].content;
 }
 
@@ -31,27 +44,47 @@ setNotesContent(0);
 
 function addToSideBar(index) {
     let sidebar = document.getElementById("notepadSidebar");
-
     let note = content[index];
 
     let newDiv = document.createElement("div");
-
     newDiv.classList.add("neu");
     newDiv.style.fontSize = "1vw";
     newDiv.style.padding = "0.5vw";
     newDiv.style.cursor = "pointer";
-    newDiv.innerHTML = `
-        <div>${note.title}</div>
-        <div>${note.date}</div>
-    `;
+
+    let titleDiv = document.createElement("div");
+    let dateDiv = document.createElement("div");
+
+    titleDiv.textContent = note.title;
+    dateDiv.textContent = note.date;
+
+    newDiv.append(titleDiv, dateDiv);
 
     newDiv.addEventListener("click", () => {
         setNotesContent(index);
     });
 
+    notesTitle.addEventListener("input", () => {
+        if (currentNoteIndex === index) {
+            titleDiv.textContent = notesTitle.value;
+        }
+    });
+
     sidebar.appendChild(newDiv);
 }
 
+
 for (let i = 0; i < content.length; i++) {
     addToSideBar(i);
+}
+
+function newNote() {
+    content.push({
+        title: "",
+        date: new Date().toLocaleDateString("en-GB"),
+        content: ""
+    });
+    localStorage.setItem("notes", JSON.stringify(content));
+    addToSideBar(content.length - 1);
+    setNotesContent(content.length - 1);
 }

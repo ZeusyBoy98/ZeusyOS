@@ -32,7 +32,11 @@
         </div>
         <div class="windowContent" style="flex-direction: row;">
             <div id="notepadSidebar"></div>
-            <textarea class="neu" spellcheck="false" id="notesContent"></textarea>
+            <div style="display: flex; flex: 1; flex-direction: column; align-items: center; gap: 1vh;">
+                <button class="neu" id="newNoteButton">New Note</button>
+                <textarea class="neu" spellcheck="false" id="notesTitle" maxlength=15></textarea>
+                <textarea class="neu" spellcheck="false" id="notesContent"></textarea>
+            </div>
         </div>
     </div>
 

@@ -79,6 +79,7 @@ span {
     border: 0.1vw solid rgb(206, 206, 206);
     border-radius: 1vw;
     max-width: 80vw;
+    max-height: 60vh;
     background-color: #c5fcffbb;
     box-shadow: inset 4px 4px 10px #bcbcbc6c, inset -4px -4px 10px #ffffff6d;
 }
@@ -91,11 +92,11 @@ span {
 .windowContent {
     display: flex;
     flex-direction: column;
-    align-items: center;
     padding: 2vw;
     width: 100%;
+    height: 100%;
     box-sizing: border-box;
-    height: 50vh;
+    height: auto;
     gap: 1vh;
 }
 
@@ -133,12 +134,14 @@ span {
 
 #notepadSidebar {
     display: flex;
+    flex: 0 0 15vw;
     flex-direction: column;
     gap: 1vw;
     margin-bottom: 2vh;
     padding: 0.2vw;
     border-right: 0.2vw solid #2727278d;
-    height: 100%;
+    overflow-y: auto;
+    max-height: 50vh;
 }
 
 /* .window:hover {
@@ -168,11 +171,22 @@ span {
     cursor: pointer;
 }
 
-textarea.neu {
+#notesContent {
+    box-sizing: border-box;
+    height: fit-content;
+    resize: none;
+    height: 30vh;
+    width: 100%
+}
+
+#notesTitle {
     box-sizing: border-box;
     width: 100%;
-    height: 30vh;
-    resize: vertical;
+    height: 7vh;
+    resize: none;
+    font-size: 3vh;
+    font-weight: bold;
+    padding: 1vh;
 }
 
 /* From Uiverse.io by adamgiebl */ 
