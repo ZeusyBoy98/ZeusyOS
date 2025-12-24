@@ -1,14 +1,19 @@
+const keys = [];
+const secretCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
 let biggestIndex = 1;
 
 /* ----------DOM Elements---------- */
 const topBar = document.getElementById("top");
 const test = document.getElementById("test");
+const konami = document.getElementById("konami");
 const usernameChanger = document.getElementById("usernameChanger");
 const notepad = document.getElementById("notepad")
 const weather = document.getElementById("weather")
+const clock = document.getElementById("clock")
 
 /* --------Window Management-------- */
 initializeWindow(test);
+initializeWindow(konami);
 initializeWindow(usernameChanger);
 initializeWindow(notepad);
 initializeWindow(weather);
@@ -93,3 +98,17 @@ function openWindow(element) {
     element.style.display = "flex";
     handleWindowTap(element);
 }
+
+function keysDetector(e) {
+    keys.push(e.key);
+
+    if (keys.length > secretCode.length) {
+        keys.shift();
+    }
+
+    if (JSON.stringify(keys) === JSON.stringify(secretCode)) {
+        konami.style.display = "flex";
+    }
+}
+
+window.addEventListener('keyup', keysDetector);
