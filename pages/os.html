@@ -30,6 +30,10 @@
             <i class="material-symbols-outlined desktopIcon"  style="color: rgb(255, 255, 155)">nest_clock_farsight_analog</i>
             <span>Clock</span>
         </div>
+        <div class="desktopApp" id="sketchOpen">
+            <i class="material-symbols-outlined desktopIcon"  style="color: rgb(145, 255, 147)">draw</i>
+            <span>Sketch</span>
+        </div>
     </div>
     <!-- Desktop Apps -->
 
@@ -105,6 +109,17 @@
         </div>
     </div>
 
+    <div class="window" id="sketch">
+        <div class="handle" id="sketchheader">
+            <div class="closeButton" id="sketchClose">x</div>
+            <div class="appHeader">Sketch</div>
+        </div>
+        <div class="windowContent">
+            <button class="neu" id="sketchResetButton">Reset</button>
+            <div id="container"></div>
+        </div>
+    </div>
+
     <div class="window" id="test">
         <div class="handle" id="testheader">
             <div class="closeButton" id="testClose">x</div>
@@ -148,5 +163,6 @@
     <script src="../js/apps/notepad.js"></script>
     <script src="../js/apps/weather.js"></script>
     <script src="../js/apps/clock.js"></script>
+    <script src="../js/apps/sketch.js"></script>
 </body>
 </html>

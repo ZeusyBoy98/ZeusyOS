@@ -10,6 +10,7 @@ const usernameChanger = document.getElementById("usernameChanger");
 const notepad = document.getElementById("notepad")
 const weather = document.getElementById("weather")
 const clock = document.getElementById("clock")
+const sketch = document.getElementById("sketch")
 
 /* --------Window Management-------- */
 initializeWindow(test);
@@ -18,6 +19,7 @@ initializeWindow(usernameChanger);
 initializeWindow(notepad);
 initializeWindow(weather);
 initializeWindow(clock);
+initializeWindow(sketch);
 
 /* ------------Functions------------ */
 function initializeWindow(element) {

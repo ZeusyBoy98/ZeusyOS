@@ -101,6 +101,19 @@ span {
     gap: 1vh;
 }
 
+#container {
+    display: grid;
+    width: 50vw;
+    height: 50vh;
+    border: 1px solid black;
+    margin-top: 20px;
+}
+
+.item {
+    border: 1px solid black;
+    color: black;
+}
+
 .handle {
     width: 100%;
     display: flex;
