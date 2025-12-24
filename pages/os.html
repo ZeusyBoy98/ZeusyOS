@@ -18,6 +18,10 @@
 
     <!-- Desktop Apps -->
     <div class="desktopApps" id="desktopApps">
+        <div class="desktopApp" id="landslideOpen">
+            <i class="material-icons desktopIcon"  style="color: rgb(106, 106, 106)">landslide</i>
+            <span>Landslide</span>
+        </div>
         <div class="desktopApp" id="notepadOpen">
             <i class="material-icons desktopIcon"  style="color: rgb(101, 224, 255)">description</i>
             <span>Notepad</span>
@@ -38,6 +42,21 @@
     <!-- Desktop Apps -->
 
     <!-- Windows -->
+     <div class="window" id="landslide">
+        <div class="handle" id="landslideheader">
+            <div class="closeButton" id="landslideClose">x</div>
+            <div class="appHeader">Landslide</div>
+        </div>
+        <div class="windowContent">
+            <div class="landslideSearchBar neu">https://landslide.org</div>
+            <div class="bookmarksBar">
+                <button class="neu bookmark">Home</button>
+                <button class="neu bookmark">Youtube</button>
+                <button class="neu bookmark">Forum</button>
+            </div>
+        </div>
+    </div>
+
     <div class="window" id="notepad" style="width: 60vw;">
         <div class="handle" id="notepadheader">
             <div class="closeButton" id="notepadClose">x</div>
@@ -164,5 +183,6 @@
     <script src="../js/apps/weather.js"></script>
     <script src="../js/apps/clock.js"></script>
     <script src="../js/apps/sketch.js"></script>
+    <script src="../js/apps/landslide.js"></script>
 </body>
 </html>

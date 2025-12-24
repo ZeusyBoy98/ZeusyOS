@@ -14,6 +14,7 @@ const sketch = document.getElementById("sketch")
 
 /* --------Window Management-------- */
 initializeWindow(test);
+initializeWindow(landslide);
 initializeWindow(konami);
 initializeWindow(usernameChanger);
 initializeWindow(notepad);

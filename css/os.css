@@ -164,6 +164,20 @@ span {
     border-radius: 100%;
 }
 
+.landslideSearchBar {
+    display: flex;
+    font-size: small !important;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: inset 4px 4px 10px #bcbcbc6c, inset -4px -4px 10px #ffffff6d !important;
+}
+
+.bookmark {
+    font-size: medium !important;
+    padding: 0.5vw !important;
+    width: 6vw;
+}
+
 /* .window:hover {
   box-shadow: inset 2px 2px 5px #bcbcbc6c, inset -2px -2px 5px #ffffff6d, 2px 2px 5px #bcbcbc6c, -2px -2px 5px #ffffff6d;
 } */
