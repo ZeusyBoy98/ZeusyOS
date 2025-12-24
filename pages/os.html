@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZeusyOS</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined">
     <link rel="stylesheet" href="../css/os.css">
 </head>
 <body>
@@ -24,6 +25,10 @@
         <div class="desktopApp" id="weatherOpen">
             <i class="material-icons desktopIcon"  style="color: rgb(0, 19, 228)">cloud</i>
             <span>Weather</span>
+        </div>
+        <div class="desktopApp" id="clockOpen">
+            <i class="material-symbols-outlined desktopIcon"  style="color: rgb(255, 255, 155)">nest_clock_farsight_analog</i>
+            <span>Clock</span>
         </div>
     </div>
     <!-- Desktop Apps -->
@@ -65,7 +70,40 @@
             <p>this app is non-functional</p>
         </div>
     </div>
-    <!-- Timer app -->
+    
+    <div class="window" id="clock" style="width: 60vw;">
+        <div class="handle" id="clockheader">
+            <div class="closeButton" id="clockClose">x</div>
+            <div class="appHeader">Clock</div>
+        </div>
+        <div class="windowContent" style="display: flex; flex-direction: column; width: 100%; align-items: center;">
+            <div style="display: flex; flex-direction: row; gap: 1vw;">
+                <button class="neu" id="timerScreenButton">Timer</button>
+                <button class="neu" id="stopwatchScreenButton">Stopwatch</button>
+            </div>
+            <div id="timerScreen">
+                <div style="display: flex; flex-direction: row; align-items: center; gap: 0.5vw;">
+                    <input type="number" class="neu" id="minutesInput" placeholder="Minutes">
+                    <div>:</div>
+                    <input type="number" class="neu" id="secondsInput" placeholder="Seconds" max=59>
+                    <button class="neu" id="addToTimer"><i class="material-icons">timer</i></button>
+                </div>
+                <h1 class="timer" id="time">24:59</h1>
+                <div style="display: flex; flex-direction: row; align-items: center; gap: 0.5vw;">
+                    <button id="startButton" class="neu">Start</button>
+                    <button id="resetButton" class="neu">Reset</button>
+                </div>
+            </div>
+            <div id="stopwatchScreen">
+                <h1 class="timer" id="stopwatchTime">00:00</h1>
+                <div style="display: flex; flex-direction: row; align-items: center; gap: 0.5vw;">
+                    <button id="stopwatchStartButton" class="neu">Start</button>
+                    <button id="stopwatchResetButton" class="neu">Reset</button>
+                </div>
+            </div>
+            <div id="clockBottomBar"></div>
+        </div>
+    </div>
 
     <div class="window" id="test">
         <div class="handle" id="testheader">
@@ -98,5 +136,6 @@
     <script src="../js/windowManager.js"></script>
     <script src="../js/apps/notepad.js"></script>
     <script src="../js/apps/weather.js"></script>
+    <script src="../js/apps/clock.js"></script>
 </body>
 </html>

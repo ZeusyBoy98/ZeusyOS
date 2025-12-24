@@ -12,6 +12,7 @@ initializeWindow(test);
 initializeWindow(usernameChanger);
 initializeWindow(notepad);
 initializeWindow(weather);
+initializeWindow(clock);
 
 /* ------------Functions------------ */
 function initializeWindow(element) {
