@@ -182,6 +182,32 @@ span {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 40vh;
+}
+
+.videos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    margin-bottom: 2vh;
+}
+
+.video img {
+    width: 100%;
+    border-radius: 0.5vw;
+}
+
+#metoob {
+    align-items: flex-start !important;
 }
 
 /* .window:hover {
