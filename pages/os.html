@@ -42,17 +42,35 @@
     <!-- Desktop Apps -->
 
     <!-- Windows -->
-     <div class="window" id="landslide">
+     <div class="window" style="width: 60vw;" id="landslide">
         <div class="handle" id="landslideheader">
             <div class="closeButton" id="landslideClose">x</div>
             <div class="appHeader">Landslide</div>
         </div>
         <div class="windowContent">
-            <div class="landslideSearchBar neu">https://landslide.org</div>
+            <div class="landslideSearchBar neu">lctp://landslide.rocks</div>
             <div class="bookmarksBar">
-                <button class="neu bookmark">Home</button>
-                <button class="neu bookmark">Youtube</button>
-                <button class="neu bookmark">Forum</button>
+                <button class="neu bookmark" id="homeButton">Home</button>
+                <button class="neu bookmark" id="metoobButton">MeToob</button>
+                <button class="neu bookmark" id="forumButton">Forum</button>
+                <button class="neu bookmark" id="docsButton" style="width: auto; float: right;"><i class="material-symbols-outlined"  style="color: #4d4d4d">developer_guide</i></button>
+            </div>
+            <div class="browserWindow" id="landslideHome">
+                <i class="material-icons desktopIcon"  style="color: rgb(106, 106, 106); font-size: 10vw">landslide</i>
+                <h2>Welcome to Landslide!</h2>
+                <div>The fastest ZeusyOS supported browser*</div>
+
+                <!-- Keep dislaimer at bottom -->
+                <div style="font-size: x-small; align-self: flex-end;">*Also the only ZeusyOS supported browser</div>
+            </div>
+            <div class="browserWindow" style="display: none" id="metoob">
+                MeToob
+            </div>
+            <div class="browserWindow" style="display: none" id="forum">
+                Bluuit
+            </div>
+            <div class="browserWindow" style="display: none" id="docs">
+                Docs
             </div>
         </div>
     </div>
