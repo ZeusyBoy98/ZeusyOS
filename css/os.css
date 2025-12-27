@@ -210,6 +210,40 @@ span {
     align-items: flex-start !important;
 }
 
+.posts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 2vh;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 30%;
+    height: 15vh;
+    border: 2px solid grey;
+    border-radius: 5%;
+    margin-bottom: 2vh;
+}
+
+.postTitle {
+    font-size: 0.8vw;
+    font-weight: bold;
+}
+
+.postSB {
+    font-size: 0.8vw;
+}
+
+.reactionBar {
+    display: flex;
+    flex-direction: row;
+}
+
 /* .window:hover {
   box-shadow: inset 2px 2px 5px #bcbcbc6c, inset -2px -2px 5px #ffffff6d, 2px 2px 5px #bcbcbc6c, -2px -2px 5px #ffffff6d;
 } */
