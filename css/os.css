@@ -244,6 +244,20 @@ span {
     flex-direction: row;
 }
 
+#docs {
+    justify-content: flex-start;
+}
+
+#docs h2,
+#docs p {
+    margin: 0.5vh 0;
+}
+
+.docsSub {
+    font-weight: bold;
+    margin-top: 1vh;
+}
+
 /* .window:hover {
   box-shadow: inset 2px 2px 5px #bcbcbc6c, inset -2px -2px 5px #ffffff6d, 2px 2px 5px #bcbcbc6c, -2px -2px 5px #ffffff6d;
 } */
