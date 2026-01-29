@@ -1,5 +1,7 @@
 const butt = document.getElementById("sketchResetButton");
 
+createGrid(10);
+
     function getRandomRGB() {
         const r = Math.floor(Math.random() * 256); // Random value for red (0-255)
         const g = Math.floor(Math.random() * 256); // Random value for green (0-255)
